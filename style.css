@@ -27,6 +27,7 @@ body {
   scroll-behavior: smooth;
   scrollbar-width: none; /* for firefox */
   margin: 0 auto;
+  margin-top: 1em;
 }
 
 .wrapperHangar1::-webkit-scrollbar { /* for chrome */
@@ -35,18 +36,25 @@ body {
 
 .sliderHangar1 {
   cursor: pointer;
-  min-width: calc(25% - .5rem);
+  min-width: calc(18% - .5rem);
   aspect-ratio: 1 / 1;
   background: #222;
   display: flex;
   justify-content: center;
   align-items: center;
   color: #fff;
-  font-size: 2rem;
+  font-size: 0.5rem;
   scroll-snap-align: start;
   font-weight: 600;
   user-select: none;
+  
 }
+
+.instrucciones{
+  background: #000;
+}
+
+
 
 .hotHatches{
     background: #fff;
@@ -65,7 +73,7 @@ body {
 
 .interaccionSlider{
   display:flex;
-  flex-direction: column;;
+  flex-direction: column;
 }
 
 .sliderInformacionContenedor{
@@ -73,18 +81,15 @@ body {
   width: 100%;
 }
 
-.buttomContainerSlider{
-  width:100%;
-  display: flex;
-  padding: 2em;
-justify-content: left;
-}
+/* Estilos de la imangen
+ */
 .imagenHangar1{
   width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
 }
+
 
 .informacion{
   width: 50%;
@@ -95,8 +100,10 @@ justify-content: left;
 
 .contenedorImagenSlider{
   width: 50%;
-  padding: 2em;
+  padding: 2em;   
 }
+
+
 .contenedorImagenSlider img{
   width: 100%;
   pointer-events: none;
@@ -109,6 +116,45 @@ justify-content: left;
 
 }
 
+ /* Seccion de modificacion de contenido del boton */
+
+.buttomContainerSlider{
+  width:100%;
+  display: flex;
+  padding: 2em;
+justify-content: left;
+}
+
+ /* Cambio de Tamaño, de color, alto y ancho  */
+.botonSlider {
+  margin-top: 1em;
+  cursor: pointer;
+  width: 20vh;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 1.125em;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #fff;
+  background: #E51E52; /* Color primario aplicado directamente */
+  border: 2px solid #E51E52; /* Color del borde aplicado directamente */
+  border-radius: .75rem;
+  box-shadow: 0 8px 0 #000; /* Color del borde aplicado a la sombra */
+  transform: skew(-10deg);
+  transition: all .1s ease;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.botonSlider:active {
+  letter-spacing: 0px;
+  transform: skew(-10deg) translateY(8px);
+  box-shadow: 0 0 0 #654dff63; /* Color de la sombra aplicado en el estado activo */
+}
+
 @media only screen and (max-width: 750px) {
   .sliderInformacionContenedor{
     width: 100%;
@@ -118,6 +164,11 @@ justify-content: left;
     flex-direction: column;
     align-items: center;
     padding: 0.5em;
+  }
+
+  .sliderHangar1 {
+    min-width: calc(25% - .5rem);
+
   }
 
   .contenedorImagenSlider{
@@ -138,31 +189,12 @@ justify-content: left;
   .wrapperHangar1{
     max-width: 768px;
   }
-}
+  .instrucciones{
+    font-size: 0.4em;
+  }
 
-.botonSlider {
-  margin-top: 1em;
-  cursor: pointer;
-  width: 184px;
-  height: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  font-size: 1.125em;
-  font-weight: 800;
-  letter-spacing: 2px;
-  color: #fff;
-  background: #E51E52; /* Color primario aplicado directamente */
-  border: 2px solid #E51E52; /* Color del borde aplicado directamente */
-  border-radius: .75rem;
-  box-shadow: 0 8px 0 #000; /* Color del borde aplicado a la sombra */
-  transform: skew(-10deg);
-  transition: all .1s ease;
-}
-
-.botonSlider:active {
-  letter-spacing: 0px;
-  transform: skew(-10deg) translateY(8px);
-  box-shadow: 0 0 0 #654dff63; /* Color de la sombra aplicado en el estado activo */
+  .textoHangar1 p{
+    font-size:9px;
+   
+   }
 }
